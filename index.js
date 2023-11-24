@@ -30,7 +30,8 @@ yargs.command({
 
   async handler() {
     const notes = await getNotes()
-    console.log(notes)
+    console.log('Here is the list of notes: ')
+    notes.forEach((note) => console.log(note.id, ' ', note.title))
   },
 })
 
